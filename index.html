@@ -657,6 +657,42 @@
     display: block;
   }
 
+
+    .faq-btn {
+      width: 100%;
+      background: transparent;
+      border: none;
+      padding: 16px 20px;
+      text-align: left;
+      font-size: 0.96rem;
+      font-weight: 600;
+      color: #f1f5f9;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+    }
+    .faq-btn:hover {
+      background: #0f172a;
+    }
+    .faq-icon {
+      font-size: 1.25rem;
+      color: #839bc8;
+      transition: transform 0.2s ease;
+    }
+    .faq-item.active .faq-icon {
+      transform: rotate(45deg);
+    }
+    .faq-body {
+      display: none;
+      padding: 0 20px 18px;
+      color: #94a3b8;
+      font-size: 0.92rem;
+      line-height: 1.6;
+    }
+    .faq-item.active .faq-body {
+      display: block;
+    }
 </style>
 <style id="tavardt-unified-enterprise-css">
 
@@ -1211,7 +1247,7 @@ footer a:hover,
 }
 
 /* ==========================================================================
-   LAYOUT 6 EXACT: SCORECARD SIMÉTRICO 2X5 BALANCEADO
+   LAYOUT 6 EXACT: BALANCED SYMMETRIC 2X5 SCORECARD
    ========================================================================== */
 .arch-bar {
   display: flex !important;
@@ -1386,7 +1422,7 @@ footer a:hover,
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4) !important;
 }
 
-/* BOTÕES DE STATUS DENTRO DO CARD */
+/* STATUS BUTTONS INSIDE CARD */
 .status-btn-group {
   display: flex !important;
   gap: 6px !important;
@@ -1426,7 +1462,7 @@ footer a:hover,
 }
 
 /* ==========================================================================
-   LAYOUT 6 EXACT: SCORECARD SIMÉTRICO 2X5 BALANCEADO
+   LAYOUT 6 EXACT: BALANCED SYMMETRIC 2X5 SCORECARD
    ========================================================================== */
 .arch-bar {
   display: flex !important;
@@ -1602,7 +1638,7 @@ footer a:hover,
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4) !important;
 }
 
-/* BOTÕES DE STATUS DENTRO DO CARD */
+/* STATUS BUTTONS INSIDE CARD */
 .status-btn-group {
   display: flex !important;
   gap: 6px !important;
@@ -2142,29 +2178,51 @@ footer > div:first-child {
 <h2 class="faq-title">Frequently Asked Questions on AI Threat Matrix</h2>
 <div class="faq-list">
 <div class="faq-item">
-<button class="faq-question" onclick="toggleFaq(this)" type="button">
-What is the MITRE ATLAS matrix and how does it safeguard enterprises?
-+
+<button class="faq-btn" onclick="toggleFaq(this)" type="button">
+<span>What is the MITRE ATLAS matrix and how does it safeguard enterprises?</span>
+<span class="faq-icon">+</span>
 </button>
-<div class="faq-answer">MITRE ATLAS catalogs real-world adversary tactics, techniques, and procedures (TTPs) targeting AI, enabling teams to build proactive defenses against machine learning attacks.</div>
+<div class="faq-body">
+MITRE ATLAS catalogs real-world adversary tactics, techniques, and procedures (TTPs) targeting AI, enabling teams to build proactive defenses against machine learning attacks.
+</div>
 </div>
 <div class="faq-item">
-<button class="faq-question" onclick="toggleFaq(this)" type="button">
-How does OWASP Top 10 for LLMs differ from traditional application security?
-+
+<button class="faq-btn" onclick="toggleFaq(this)" type="button">
+<span>How does OWASP Top 10 for LLMs differ from traditional application security?</span>
+<span class="faq-icon">+</span>
 </button>
-<div class="faq-answer">It addresses unique vulnerabilities inherent to generative AI architectures, including prompt injection, insecure output handling, and supply chain poisoning.</div>
+<div class="faq-body">
+It addresses unique vulnerabilities inherent to generative AI architectures, including prompt injection, insecure output handling, and supply chain poisoning.
+</div>
 </div>
 <div class="faq-item">
-<div class="faq-question">What are the most critical threats facing autonomous AI agents?<span class="faq-toggle">+</span></div>
-<div class="faq-answer">The most critical threats include Insecure Agency (unauthorized tool execution), memory state corruption, and indirect prompt injection via retrieved third-party context.</div>
-</div><div class="faq-item">
-<div class="faq-question">How do you measure risk posture in enterprise AI systems?<span class="faq-toggle">+</span></div>
-<div class="faq-answer">By evaluating perimeter boundaries, backend isolation protocols, tool execution limits, and multi-layered guardrail resilience across the lifecycle.</div>
-</div><div class="faq-item">
-<div class="faq-question">How does TAVARDT support AI threat mitigation?<span class="faq-toggle">+</span></div>
-<div class="faq-answer">TAVARDT provides adversarial red teaming, architectural threat modeling, edge model guardrail engineering, and Cloudflare Zero Trust perimeter protection.</div>
-</div></div>
+<button class="faq-btn" onclick="toggleFaq(this)" type="button">
+<span>What are the most critical threats facing autonomous AI agents?</span>
+<span class="faq-icon">+</span>
+</button>
+<div class="faq-body">
+The most critical threats include Insecure Agency (unauthorized tool execution), memory state corruption, and indirect prompt injection via retrieved third-party context.
+</div>
+</div>
+<div class="faq-item">
+<button class="faq-btn" onclick="toggleFaq(this)" type="button">
+<span>How do you measure risk posture in enterprise AI systems?</span>
+<span class="faq-icon">+</span>
+</button>
+<div class="faq-body">
+By evaluating perimeter boundaries, backend isolation protocols, tool execution limits, and multi-layered guardrail resilience across the lifecycle.
+</div>
+</div>
+<div class="faq-item">
+<button class="faq-btn" onclick="toggleFaq(this)" type="button">
+<span>How does TAVARDT support AI threat mitigation?</span>
+<span class="faq-icon">+</span>
+</button>
+<div class="faq-body">
+TAVARDT provides adversarial red teaming, architectural threat modeling, edge model guardrail engineering, and Cloudflare Zero Trust perimeter protection.
+</div>
+</div>
+</div>
 </section>
 <div class="cta-card">
 <h3>Require Enterprise Mitigation for AI System Threats?</h3>
